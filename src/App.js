@@ -1,61 +1,126 @@
 import React, { useState } from 'react';
 
 const originalQuizData = [
-  // Questions should be defined here as normal, unchanged.
-   {
-    question: "Which of the following describes the cause of a loss?",
-    options: ["Risk", "Hazard", "Peril", "Insurance"],
-    answer: "Peril"
+  // ... your questions (unchanged)
+  {
+    question: "A policyowner suffers an injury that renders him incapable of performing one or more important job duties. Any decrease in income resulting from this injury would make him eligible for benefits under which provision?",
+    options: [
+      "A. Partial disability",
+      "B. Non Disabling injury",
+      "C. Presumptive disability",
+      "D. Flat amount disability"
+    ],
+    answer: "A. Partial disability"
   },
   {
-    question: "Which approach considers the future needs of the survivors in determining amounts of life insurance?",
-    options: ["Human Life Value Approach.", "Cost Comparison Approach.", "Living Benefits Approach", "Needs Approach"],
-    answer: "Needs Approach"
+    question: "Medicaid is a government-funded program designed to provide health care to",
+    options: [
+      "A. all individuals over the age of 65..",
+      "B. All individuals who carry Medicare supplemental insurance.",
+      "C. Anyone who does not have a proper caregiver.",
+      "D. Low income state resident."
+    ],
+    answer: "D. Low income state resident."
   },
   {
-    question: "Replacing a policy when it is NOT in the best interest of a client is known as",
-    options: ["discrimination", "defamation", "twisting", "rebating"],
-    answer: "twisting"
+    question: "Group Disability Income Insurance usually involves",
+    options: [
+      "A. Higher premiums than individual disability policies.",
+      "B. Providing benefits for nonoccupational illnesses and injuries.",
+      "C. A requirement that all employees participate",
+      "D. Workers who are individually uninsurable because of their high-risk occupations"
+    ],
+    answer: "B. Providing benefits for nonoccupational illnesses and injuries."
   },
   {
-    question: "Under a Universal Life insurance policy, a corridor represents the",
-    options: ["gap between the total death benefit and the policy's cash value.", "time allotted to the insured to convert a group policy to an individual policy.", "stipulated time period that a policy may be reinstated after it has lapsed.", "percentage of benefits paid to each of the policy’s beneficiaries."],
-    answer: "gap between the total death benefit and the policy's cash value."
+    question: "Utilization review includes all of the following EXCEPT",
+    options: [
+      "A. Projected date for release of the patient",
+      "B. Continues analysis of accident-prone individuals",
+      "C. Cost-effective ways of handling patients with catastrophic illnesses.",
+      "D. Intermittent analysis of the reasons for the patient to remain in the healthcare facility"
+    ],
+    answer: "A. Projected date for release of the patient"
   },
   {
-    question: "The insured, who is 59 years of age decides to replace a long-term care policy they had for five years for a new policy. Which of the following is true of the insurer?",
-    options: ["The original insurer will reimburse benefit dollars not used under the original policy period.", "The replacement insurer will probationary period and preexisting condition limitations.", "The replacement insurer will not honor previous exclusions that had previously been satisfied under the original policy.", "The replacement insurer will waive probationary periods pertaining to preexisting conditions satisfied under the original policy."],
-    answer: "The replacement insurer will not honor previous exclusions that had previously been satisfied under the original policy."
+    question: "Which of the following types of long-term care benefits would be best suited for a senior citizen who needs supervision, social, and recreational services?",
+    options: [
+      "A. Respite care",
+      "B. Adult Day care",
+      "C. Home health care",
+      "D. Nursing home care"
+    ],
+    answer: "B. Adult Day care"
   },
   {
-    question: "A travel accident policy and a dread disease contract are examples of",
-    options: ["group health policies.", "family health policies.", "personal health policies.", "limited health insurance policies."],
-    answer: "limited health insurance policies."
+    question: "If agent Sue completes an application for an insurance policy on behalf of Phil, and the company agrees to insure him, which party made the offer?",
+    options: [
+      "A. Sue, when she made the initial appointment",
+      "B. Phil, when he completed the application",
+      "C. The company, when it issued the policy",
+      "D. Phil, when he received the policy"
+    ],
+    answer: "C. The company, when it issued the policy"
   },
   {
-    question: "A 65 Year-old employee who works for an employer with 24 employees is disabled on the job. The employee has fully recovered and returned to work. Which health coverage is primary?",
-    options: ["Medicaid", "an individual plan", "workers' compensation", "his employer’s group plan"],
-    answer: "workers’ compensation"
+    question: "When a buyer is considering a long-term care policy, they are encouraged to review carefully all policy",
+    options: [
+      "A. Limitations.",
+      "B. Facilities.",
+      "C. Carriers.",
+      "D. Agents."
+    ],
+    answer: "A. Limitations."
   },
   {
-    question: "The PRIMARY difference between a noncancellable policy and guaranteed renewable policy is that only with a noncancelable policy can the insurer",
-    options: ["Retain the right to refuse to renew the policy at a certain age", "cancel for excessive claims.", "allow renewal of policy for 5 years if the insured is over age 54.", "never raise premiums."],
-    answer: "Retain the right to refuse to renew the policy at a certain age"
+    question: "According to the Fair Credit Reporting Act, an insurer does NOT need to",
+    options: [
+      "Inform the applicant that an investigation is being conducted",
+      "Discuss any credit history inconsistencies with the application",
+      "Inform the applicant about the scope of an investigation",
+      "Notify the applicant if an application is denied"
+    ],
+    answer: "Discuss any credit history inconsistencies with the application"
   },
   {
-    question: "Sue Ellen is the sister of a licensed New York insurance producer, Frank Gillespie. Frank was recently killed in a car accident and Sue Ellen has been issued a temporary license to run Frank's agency. For what period of time is the initial temporary license valid?",
-    options: ["3 months.", "6 months.", "1 year.", "2 years."],
-    answer: "6 months."
+    question: "Which of the following is NOT considered advertising?",
+    options: [
+      "A policy illustration",
+      "An AM Best company rating",
+      "A direct mailing by an insurer",
+      "An agent’s oral sales presentation"
+    ],
+    answer: "An AM Best company rating"
   },
   {
-    question: "Which of the following is a characteristic of level premium term life insurance",
-    options: ["It provides for lower benefits.", "It can be used for cash value.", "It matches the level amount of protection on the insured's life expectancy.", "The cost of insurance is averaged throughout the contract."],
-    answer: "The cost of insurance is averaged throughout the contract."
+    question: "How many days after an accident and health policy has been reinstated is there coverage for sickness?",
+    options: [
+      "1 day",
+      "3 days",
+      "5 days",
+      "10 days"
+    ],
+    answer: "10 days"
   },
   {
-    question: "Some states have laws ensuring that health insurance coverages are available at a reasonable cost and under reasonable conditions for small employers. Small employers are defined as having no more than",
-    options: ["200 employees.", "150 employees.", "100 employees.", "75 employees."],
-    answer: "100 employees."
+    question: "A Key Person Disability Income Policy pays benefits to the",
+    options: [
+      "Spouse",
+      "Dependent",
+      "Employee",
+      "Employer"
+    ],
+    answer: "Employer"
+  },
+  {
+    question: "A 65-year-old employee who works for an employer with 24 employees is disabled on the job. The employee has fully recovered and returned to work. Which health insurance coverage is primary?",
+    options: [
+      "Medicaid",
+      "An individual's plan",
+      "Workers’ compensation",
+      "His employer’s group plan"
+    ],
+    answer: "Workers’ compensation"
   },
 ];
 
@@ -80,7 +145,8 @@ function App() {
   const handleSelect = (option) => {
     if (userAnswers[currentQuestion] !== undefined || !quizData[currentQuestion]) return;
 
-    const isCorrect = option === quizData[currentQuestion].correct;
+    const correctKey = quizData[currentQuestion].correct || quizData[currentQuestion].answer;
+    const isCorrect = option === correctKey;
     setUserAnswers((prev) => ({ ...prev, [currentQuestion]: option }));
     if (isCorrect) {
       setScore((prev) => prev + 1);
@@ -122,11 +188,11 @@ function App() {
   }
 
   const selectedAnswer = userAnswers[currentQuestion];
-  const correctAnswer = currentQ.correct;
+  const correctAnswer = currentQ.correct || currentQ.answer;
   const optionLabels = ['A', 'B', 'C', 'D'];
 
   return (
-    <div className="p-6 max-w-2xl mx-auto">
+    <div className="p-6 max-w-4xl mx-auto">
       <h1 className="text-2xl font-bold mb-4 text-center">Insurance Exam Quiz</h1>
 
       {showSummary ? (
@@ -138,7 +204,7 @@ function App() {
       ) : (
         <div className="bg-white p-6 rounded-xl shadow-md mb-4">
           <p className="font-semibold mb-4">{currentQ.question}</p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-col gap-4">
             {currentQ.options.map((option, i) => (
               <button
                 key={i}
